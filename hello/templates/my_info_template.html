@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+<div class="jumbotron" style="height: 400px">
+    <h3 class="cont"><strong>Contacts</strong></h1>
+    <div class="sen">
+        <p><strong>Name</strong> : {{info.name}}</p>
+        <p><strong>Surname</strong> : {{info.surname}}</p>
+        <p><strong>Date of birth</strong> : {{info.date}}</p>
+        <p style="width: 400px"><strong>About me</strong> :<br>{{info.bio|linebreaksbr}}</p>
+    </div>
+    <div class="sen_1">
+        <p><strong>Email</strong> : {{info.email}}</p>
+        <p><strong>Skype</strong> : {{info.skype}} </p>
+        <p><strong>Other contacts</strong> : <br>{{info.contacts|linebreaksbr}}</p>
+    </div>
+</div>
+{% endblock %}s
+

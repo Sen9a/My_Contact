@@ -1,0 +1,25 @@
+[
+  {
+    "model":"hello.contact",
+    "pk":1,
+    "fields":{
+        "name" : "Oleg",
+        "surname" : "Senyshyn",
+        "date" : "1990-08-02",
+        "bio" : "Working, on a free time learn Python,JavaScript,Django.\nI want to become a full stack Django developer.",
+        "email" : "sen9a1990@gmail.com",
+        "skype" : "sen9a1990",
+        "contacts" : "None"
+    }
+  },
+  { "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "admin",
+            "password": "pbkdf2_sha256$12000$iyrIHW1RgT12$fO6NB9NDsp7OCr6NYEsdWCVABAsE/8/uRcSlf6occiY=",
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true
+        }
+  }
+]
