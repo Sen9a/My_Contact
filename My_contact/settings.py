@@ -105,5 +105,4 @@ FIXTURE_DIRS = (
     os.path.join(BASE_DIR, 'assets/fixtures'),
 )
 
-
 STATIC_URL = '/static/'

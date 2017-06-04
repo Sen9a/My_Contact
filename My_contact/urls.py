@@ -3,6 +3,7 @@ from hello.views import Info_view
 from django.contrib import admin
 admin.autodiscover()
 
+
 urlpatterns = patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
