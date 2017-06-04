@@ -1,0 +1,23 @@
+.sen {
+	line-height: 25px;
+	font-size: 20px;
+	margin-left:15px;
+	float: left;
+	width: 500px;
+}
+.sen_1{
+	font-size: 20px;
+	line-height: 25px;
+	
+}
+.cont{
+	margin-top: 5px;
+	margin-left:515px;
+} 
+
+div.container .my_jumbotron{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+} 
