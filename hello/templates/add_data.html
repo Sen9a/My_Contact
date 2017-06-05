@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Add data{% endblock title %}
+
+
+
+{% block content %}
+  <div class="jumbotron">
+    <form id = 'my_add_info' class="form-group" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+      <div class="sen">
+        <p>
+          <label  for="{{ form.name.id_for_label }}">Name:</label>
+          {{ form.name }}
+        </p>
+        <p>
+          <label  for="{{ form.surname.id_for_label }}">Surname:</label>
+          {{ form.surname }}
+        </p>
+          {{ form.date }}
+      </div>
+      <div class="sen_1">
+        <p>
+          <label  for="{{ form.skype.id_for_label }}">Skype:</label>
+          {{ form.skype }}
+        </p>
+        <p>
+          <label  for="{{ form.email.id_for_label }}">Email:</label>
+          {{ form.email }}
+        </p>
+        </div>
+        <div class="sen_img">
+            {{ form.image }}
+            <p>
+              <label  for="{{ form.bio.id_for_label }}">About your self:</label>
+              {{ form.bio }}
+            </p>
+            <p>
+              <label  for="{{ form.contacts.id_for_label }}">Contacts:</label>
+              {{ form.contacts }}
+            </p>
+          </span>
+        </div>
+        <div class="batons">
+          <input type="submit" value="Save" class="btn btn-success">
+          <a class="btn btn-success" href="{% url 'my_info' %}">Cansel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+    <script type="text/javascript">
+      var edit_url = "/to_form/{{ id }}/"
+      {% if form.image.value %}
+        var image_value = "/assets/uploads/{{form.image.value}}"
+      {% else %}
+        var image_value = "http://www.placehold.it/200x200"
+      {% endif %}
+    </script>
+{% endblock %}

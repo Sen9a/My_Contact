@@ -3,19 +3,29 @@
 
 
 {% block content %}
-<div class="jumbotron" style="height: 400px">
+<div class="jumbotron">
     <h3 class="cont"><strong>Contacts</strong></h1>
     <div class="sen">
         <p><strong>Name</strong> : {{info.name}}</p>
         <p><strong>Surname</strong> : {{info.surname}}</p>
         <p><strong>Date of birth</strong> : {{info.date}}</p>
-        <p style="width: 400px"><strong>About me</strong> :<br>{{info.bio|linebreaksbr}}</p>
     </div>
     <div class="sen_1">
         <p><strong>Email</strong> : {{info.email}}</p>
         <p><strong>Skype</strong> : {{info.skype}} </p>
-        <p><strong>Other contacts</strong> : <br>{{info.contacts|linebreaksbr}}</p>
+    </div>
+    <div class="sen_img">
+    {% if info.image %}
+        <span ><img src="{{info.image.url}}"></span>
+    {% else %}
+        <span><img src="http://www.placehold.it/200x200"/></span>
+    {% endif %}
+        <span>
+            <p><strong>About me</strong> :<br>{{info.bio|linebreaksbr}}</p>
+            <p><strong>Other contacts</strong> : <br>{{info.contacts|linebreaksbr}}</p>
+            <a id ="edit_data" href="/to_form/{{ info.id }}/" class="btn btn-success">Edit data</a>
+      </span>
     </div>
 </div>
-{% endblock %}s
+{% endblock %}
 

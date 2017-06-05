@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
+    'floppyforms',
     'hello',
 )
 
@@ -77,6 +78,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'assets', 'uploads')
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/assets/uploads/'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets/static')
 
 # Static files (CSS, JavaScript, Images)
@@ -106,3 +114,5 @@ FIXTURE_DIRS = (
 )
 
 STATIC_URL = '/static/'
+
+SOUTH_TESTS_MIGRATE = False

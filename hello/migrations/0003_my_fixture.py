@@ -25,6 +25,7 @@ class Migration(DataMigration):
             'date': ('django.db.models.fields.DateField', [], {}),
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'skype': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'surname': ('django.db.models.fields.CharField', [], {'max_length': '200'})
