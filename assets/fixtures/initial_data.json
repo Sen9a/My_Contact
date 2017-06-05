@@ -9,7 +9,8 @@
         "bio" : "Working, on a free time learn Python,JavaScript,Django.\nI want to become a full stack Django developer.",
         "email" : "sen9a1990@gmail.com",
         "skype" : "sen9a1990",
-        "contacts" : "None"
+        "contacts" : "None",
+        "image": ""
     }
   },
   { "model": "auth.user",
